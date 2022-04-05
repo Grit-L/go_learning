@@ -7,12 +7,12 @@ import "fmt"
 // fmt.Sprintf()  字符串拼接
 // String.Contains
 // String.Split 分割
-// String.Index 
-// String.LastIndex 
+// String.Index
+// String.LastIndex
 // String.Join
-// byte类型 asscii
-// rune类型 uint8
-func main(){
+// byte类型 asscii unit8
+// rune类型 int32
+func main() {
 	ch := '和'
 	st := "hhh"
 	f := `
@@ -25,7 +25,8 @@ func main(){
 	// 类型转换
 	s2 := "白萝卜"
 	s3 := []rune(s2)
-	s3[0] = '白'  // rune(int32)
-	fmt.Printf(string(s3))
+	s3[0] = '红' // rune(int32)
+	fmt.Println(string(s3))
+	addStr := s2 + st
+	fmt.Printf(addStr)
 }
-
