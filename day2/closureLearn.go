@@ -10,6 +10,7 @@ var where = log.Print
 
 func main() {
 	fmt.Println(f())
+
 	p2 := Add2()
 	fmt.Printf("Call Add2 for 3 gives: %v\n", p2(3))
 
@@ -26,6 +27,14 @@ func main() {
 	bmp := MakeAddSuffix("bmp")
 	filename := bmp("ss.")
 	fmt.Printf("\n%s", filename)
+}
+
+//2
+func f() (ret int) {
+	defer func() {
+		ret++
+	}()
+	return 1
 }
 
 func Add2() func(b int) int {
@@ -58,12 +67,4 @@ func MakeAddSuffix(suffix string) func(string) string {
 		}
 		return s
 	}
-}
-
-//2
-func f() (ret int) {
-	defer func() {
-		ret++
-	}()
-	return 1
 }

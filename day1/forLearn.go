@@ -18,7 +18,11 @@ func main() {
 
 	//range15()
 	//fizzBuzz()
-	//str2 := "Chinese: 优美的中国话"
+	str2 := "Chinese: 优美的中国话"
+	for _, v := range str2 {
+		fmt.Printf("type %T value %v \n", v, v)
+		fmt.Println(string(rune(20248)))
+	}
 	//forRange(str2, "rune")
 
 	for i := 0; i < 5; i++ {
@@ -31,6 +35,9 @@ func main() {
 	//无限循环
 	//for i := 0; ; i++ {
 	//	fmt.Println("Value of i is now:", i)
+	//}
+	//for {
+	//	fmt.Printf("无限循环！！！")
 	//}
 
 	//for i := 0; i < 3; {
